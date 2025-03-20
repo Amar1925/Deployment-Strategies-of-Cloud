@@ -12,7 +12,7 @@ Some Advantages of Public Cloud are:
 - Global Reach – We can access resources from anywhere using just an internet connection and logging in to cloud providers site.
 - Low Cost – We dont have to pay for hardware set up like servers and computing resources like CPU, RAM, Storage etc. as the cloud provider does it for us. 
 ### 2. Private Cloud:
- This is a cloud computing model where resources are exclusively used by a single organization. It provides greater control, security, and customization, making it ideal for businesses with strict data security and compliance requirements. Examples include Openstack, VMware.
+ This is a cloud computing model where resources are exclusively used and owned by a single organization. It provides greater control, security, and customization, making it ideal for businesses with strict data security and compliance requirements. Examples include Openstack, VMware.
 The single organisation hosting the private cloud has full control over it and its hardware resources which gives it <ins> TCO or total cost of ownership over its product </ins>
 - Private Cloud is better over public cloud if you want full control over your resources and dont have much budget constraint as it gives TCO as said above while public cloud provides lower set up costs but can have unpredictable costs over time which are undesirable.
 Advantages:
