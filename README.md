@@ -5,7 +5,7 @@ While cloud computing is using these on demand resources over the internet  for 
 Here we will be talking about two types of cloud:
  ### 1. Public Cloud: 
 This is a cloud computing model where computing resources like servers, storage, and applications are owned and operated by third-party cloud providers like AWS, GCC(google cloud), Microsoft Azure and are shared among multiple users over the internet.
-– This means that a single computing resource can be shared with many users at a particular time which is sometimes undesirable. Nowadays many companies and organisations are using public cloud to host their applications like Netflix, Gmail, Dropbox etc.
+- This means that a single computing resource can be shared with many users at a particular time which is sometimes undesirable. Nowadays many companies and organisations are using public cloud to host their applications like Netflix, Gmail, Dropbox etc.
 Some Advantages of Public Cloud are:
 - High Scalability – Instantly increase or decrease resources according to need.
 - Reliability – Cloud providers like AWS offer high uptime (99.99%) and they have a contract for the same.
