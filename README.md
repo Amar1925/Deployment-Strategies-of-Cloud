@@ -1,7 +1,7 @@
 # Deployment-Strategies-of-Cloud
 ## Introduction
-First let us understand what Cloud is and what cloud computing is then we will come to the issue of deployment strategies of cloud. Cloud is the computing resources which are provided to us like storage, RAM, CPU, networking etc. over the internet
-While cloud computing is using these on demand resources over the internet wothout them being physically present with us. This ensures accesibility, scalability, observability, reliability, authenticity, security etc.
+First let us understand what Cloud is and what cloud computing is then we will come to the issue of deployment strategies of cloud. Cloud is the computing resources which are provided to us like storage, RAM, CPU, networking etc. over the internet.
+While cloud computing is using these on demand resources over the internet  for deploying applications or any other task without hardware being physically present with us. This ensures accesibility, scalability, observability, reliability, authenticity, security etc.
 Here we will be talking about two types of cloud:
  ### 1. Public Cloud: 
 This is a cloud computing model where computing resources like servers, storage, and applications are owned and operated by third-party cloud providers like AWS, GCC(google cloud), Microsoft Azure and are shared among multiple users over the internet.
