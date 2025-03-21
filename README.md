@@ -65,6 +65,7 @@ A public cloud is a computing environment where cloud resources are owned and ma
 Examples include: 
 
 - Hosting a website on AWS EC2 instance or hosting web application on ec2 using the public IP provided by amazon.
+  - In this we will first create AWS account and launch ec2 instance to host web app, we will use amazon RDS for database management, amazon s3 for storage of files, Configure IAM roles and security groups for access control and use docker for deploying the application directly on the EC2 instance.
 
 - Using Google Cloud Storage for storing backup data.
 
@@ -91,7 +92,8 @@ A private cloud is a cloud infrastructure that is exclusively used by a single o
 
 ### Example Services
 
-- Running OpenStack on in-house servers.
+- Running OpenStack to deploy erp system on in-house servers.
+  - We will first install and configure OpenStack on on-premise servers, set up Ceph Storage(which is simiilar to s3 but is self hosted) for handling storage needs, and use Neutron for network management and Keystone for authentication
 
 - Hosting an enterprise database in a private data center.
 
@@ -119,7 +121,8 @@ Cloud bursting is a hybrid model where an organization primarily runs applicatio
 - Increased network complexity.
 
 ### Examples:
-- E-commerce: Hosting the website on a public cloud and the database on a private cloud.
+- Handling peak traffic using AWS.
+  - We will host the main site in a private cloud such as OpenStack, then we will configure a load balancer to detect high traffic spikes, Connect OpenStack with AWS via VPN, Use AWS Auto Scaling to add EC2 instances dynamically when demand increases and redirect traffic from the private cloud to AWS during peak loads
 - Development and testing: Using the public cloud for development and testing, and the private cloud for production.
 - Data backup and archival.
 
@@ -143,6 +146,8 @@ In this model, a private cloud infrastructure is hosted within a public cloud pr
 - Performance can be degraded.
 
 ### Examples:
+- Deploying a bank’s private cloud on AWS VPC
+  - We will set up a dedicated AWS VPC with restricted access, use AWS Direct Connect for a private, high-speed connection,deploy workloads on AWS EC2 Bare Metal instances for full control.Implement IAM and security groups for compliance and security and integrate with AWS Key Management Service (KMS) for data encryption.
 - Running VMWare workloads inside of AWS, Azure VMWare solution, or Google VMWare engine.
 
 ### 5. Private on Private Cloud (Multi-Private Cloud)
@@ -168,7 +173,9 @@ A multi-private cloud strategy involves using multiple private cloud environment
 - Vendor lock in.
 
 ### Examples:
-- Healthcare organizations with sensitive patient data.
+- A government agency running services across multiple data centers
+  - Deploy OpenStack in two or more private data centers, use VMware vSphere for virtualization, configure Cisco ACI for interconnecting networks, deploy workloads on Red Hat OpenShift for containerized apps.Implement multi-site replication and failover for disaster recovery.
+
 - Financial institutions with strict compliance requirements.
 
 ### 6. Public on Public Cloud (Multi-Public Cloud)
@@ -197,7 +204,8 @@ This strategy involves distributing services across multiple public cloud provid
 
 ### Examples:
 - Using AWS for compute, Azure for databases, and GCP for data analytics.
-- Global companies needing regional datacenters.
+- Hosting different microservices on AWS and Google Cloud
+  - Deploy backend microservices using AWS Lambda (serverless), host frontend on Google Firebase.Deploy additional services on Google Kubernetes Engine (GKE).Use Google Cloud Pub/Sub to synchronize data between clouds.Implement API Gateway for a unified service endpoint.
 
 ### 7. OpenStack on Kubernetes
 
@@ -223,7 +231,8 @@ This approach involves running OpenStack services as containerized applications 
 - Can create more overhead.
 
 ### Examples:
-- Organizations that want to modernize their private cloud infrastructure.
+- Running OpenStack control plane inside Kubernetes for scalability
+  - Deploy a Kubernetes cluster using KubeSpray or Rancher. Install OpenStack Helm to deploy OpenStack services as containers. Use KubeVirt for VM-based workloads within Kubernetes. Deploy Prometheus for monitoring OpenStack services. Implement Ingress Controllers for managing OpenStack API traffic.
 - Telecommunications companies using OpenStack for network functions virtualization (NFV).
 
 ### 8. Kubernetes on OpenStack
@@ -248,5 +257,7 @@ This model involves deploying Kubernetes clusters on top of OpenStack infrastruc
 - Performance can be affected by OpenStack's virtualization layer.
 
 ### Examples:
-- Organizations running containerized applications in a private cloud environment.
+- Deploying Kubernetes on an OpenStack cloud for containerized workloads
+  - Set up an OpenStack cloud environment. Use OpenStack Magnum to provision Kubernetes clusters. Deploy containerized applications using Helm Charts. Use Ceph Storage for Kubernetes Persistent Volumes. Implement Kubernetes Operators for automated management of applications.
+
 - Companies using OpenStack for their IaaS (infrastructure as a service) and Kubernetes for their PaaS (platform as a service).
