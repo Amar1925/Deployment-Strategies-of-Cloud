@@ -2,6 +2,24 @@
 ## Introduction
 First let us understand what Cloud is and what cloud computing is then we will come to the issue of deployment strategies of cloud. Cloud is the computing resources which are provided to us like storage, RAM, CPU, networking etc. over the internet.
 While cloud computing is using these on demand resources over the internet  for deploying applications or any other task without hardware being physically present with us. This ensures accesibility, scalability, observability, reliability, authenticity, security etc.
+Cloud computing works on 3 main models: 
+### IAAS(Infrastructure as a service):
+- IaaS contains the basic building blocks for cloud IT and typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space.
+- This provides us with on demand computing resources, scalability and elasticity and full control over the infrastructure
+- Examples include: AWS Ec2, Aws S3 bucket, AWS VPC
+
+### PAAS(Platform as a Service):
+- Provides a platform for developing, deploying, and managing applications without managing the underlying infrastructure.
+- The cloud provider handles operating systems, middleware, and runtime environments while we manage applications and data
+- Examples include: AWS elastic beanstlk (which is used for deploying and managing web applications), AWS RDS(Relational Database service)
+
+### SAAS(Software as a Service):
+- Delivers software applications over the internet on a subscription basis.
+- The cloud provider manages everything, including infrastructure, platform, and application, we just use the software
+- The advantage here is that we have ready to use applications and no installation is required.
+- Examples: AWS Marketplace offers AMI which has pre installed software which we can select according to our usage, Dropbox which is a cloud-based file storage service that runs on AWS.
+
+
 Here we will be talking about two types of cloud:
  ### 1. Public Cloud: 
 This is a cloud computing model where computing resources like servers, storage, and applications are owned and operated by third-party cloud providers like AWS, GCC(google cloud), Microsoft Azure and are shared among multiple users over the internet.
@@ -127,3 +145,108 @@ In this model, a private cloud infrastructure is hosted within a public cloud pr
 ### Examples:
 - Running VMWare workloads inside of AWS, Azure VMWare solution, or Google VMWare engine.
 
+### 5. Private on Private Cloud (Multi-Private Cloud)
+
+A multi-private cloud strategy involves using multiple private cloud environments across different vendors or locations, primarily for redundancy, compliance, and disaster recovery.
+
+- **Deployment**: A dedicated private cloud environment is hosted by a third-party provider.
+- Offers the benefits of a private cloud with managed services.
+- The hardware is dedicated to one customer.
+
+### Cost:
+- Higher than public cloud, but may be lower than on-premise private cloud.
+- Cost is based on dedicated resources, and management services.
+
+### Advantages:
+- Enhanced security and compliance.
+- Dedicated resources and performance.
+- Managed services.
+
+### Disadvantages:
+- Less flexibility than public cloud.
+- Higher costs than public cloud.
+- Vendor lock in.
+
+### Examples:
+- Healthcare organizations with sensitive patient data.
+- Financial institutions with strict compliance requirements.
+
+### 6. Public on Public Cloud (Multi-Public Cloud)
+
+This strategy involves distributing services across multiple public cloud providers to improve reliability, avoid vendor lock-in, and optimize costs.
+
+- **Deployment**:
+- Utilizes multiple public cloud providers.
+- Services are distributed across different clouds.
+- Allows for best-of-breed selection and vendor diversification.
+
+### Cost:
+- Variable, depending on usage across multiple providers.
+- Requires careful cost management.
+
+### Advantages:
+- Avoids vendor lock-in.
+- Leverages best-of-breed services.
+- Improved resilience and redundancy.
+- Geographic distribution.
+
+### Disadvantages:
+- Increased complexity in management.
+- Integration challenges.
+- Potential for higher costs.
+
+### Examples:
+- Using AWS for compute, Azure for databases, and GCP for data analytics.
+- Global companies needing regional datacenters.
+
+### 7. OpenStack on Kubernetes
+
+This approach involves running OpenStack services as containerized applications within Kubernetes clusters, offering a modern, scalable infrastructure.
+
+- **Deployment**: OpenStack, an open-source cloud computing platform, is deployed on Kubernetes, a container orchestration platform.
+- Kubernetes manages the OpenStack control plane and services.
+- Openstack provides the IaaS, and Kubernetes manages the Openstack services.
+
+### Cost:
+- Cost includes hardware, software licensing, and operational expenses.
+- Requires skilled personal.
+
+### Advantages:
+- Improved scalability and resilience of OpenStack.
+- Simplified management of OpenStack services.
+- Containerized deployment of OpenStack components.
+- Modernization of Openstack.
+
+### Disadvantages:
+- Increased complexity in setup and management.
+- Requires expertise in both OpenStack and Kubernetes.
+- Can create more overhead.
+
+### Examples:
+- Organizations that want to modernize their private cloud infrastructure.
+- Telecommunications companies using OpenStack for network functions virtualization (NFV).
+
+### 8. Kubernetes on OpenStack
+
+This model involves deploying Kubernetes clusters on top of OpenStack infrastructure, allowing containerized workloads to run efficiently in a private cloud.
+
+- **Deployment**: Kubernetes is deployed on top of OpenStack's infrastructure.
+- OpenStack provides the underlying virtual machines and storage for Kubernetes clusters.
+- Openstack provides the IaaS, and Kubernetes provides the PaaS.
+
+### Cost:
+- Cost includes OpenStack infrastructure and Kubernetes management.
+- Requires less overhead than openstack on kubernetes.
+
+### Advantages:
+- Leverages OpenStack's infrastructure capabilities.
+- Provides a flexible and scalable platform for containerized applications.
+- Allows to use Kubernetes on private clouds.
+
+### Disadvantages:
+- Requires integration between OpenStack and Kubernetes.
+- Performance can be affected by OpenStack's virtualization layer.
+
+### Examples:
+- Organizations running containerized applications in a private cloud environment.
+- Companies using OpenStack for their IaaS (infrastructure as a service) and Kubernetes for their PaaS (platform as a service).
